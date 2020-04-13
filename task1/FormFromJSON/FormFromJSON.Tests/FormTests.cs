@@ -10,7 +10,7 @@ namespace FormFromJSON.Tests
         public void ReadJson()
         {
             var form = new Form();
-            form.ReadFromJson(@"filename.json");
+            form.ReadFromJson(@"../../filename.json");
             Assert.IsNotNull(form);
         }
 
@@ -18,9 +18,9 @@ namespace FormFromJSON.Tests
         public void WriteToHtml()
         {
             var form = new Form();
-            form.ReadFromJson("filename.json");
-            form.WriteToHtml("example.html");
-            Process.Start("example.html");
+            form.ReadFromJson(@"../../filename.json");
+            form.WriteToHtml(@"example.html");
+            Process.Start(@"example.html");
             Assert.IsNotNull(form);
         }
     }
